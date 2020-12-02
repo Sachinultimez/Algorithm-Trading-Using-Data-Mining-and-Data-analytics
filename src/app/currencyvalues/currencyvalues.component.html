@@ -1,0 +1,171 @@
+<!--
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>Date</th>
+          <th>{{currentDate | date:'yyyy-MM-dd'}}</th>
+      </tr>
+  </thead>
+  <tbody>
+        <td>{{users.CAD}}</td>
+      <td>{{users.USD}}</td>
+    
+  </tbody>
+</table>
+
+
+
+
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select Base Currency</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>USD</button>
+        <button ngbDropdownItem>EUR</button>
+        <button ngbDropdownItem>INR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+-->
+<!--<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You're logged in with Angular 6!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
+<p><a [routerLink]="['/login']">Logout</a></p> !-->
+
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ALGO Trading</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+</head>
+<body style="background-color:black">
+      <nav class="navbar navbar-inverse">
+  <div class="container-fluid"> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+        <span class="icon-bar" ></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">ALGO TRADING</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav">
+        <li class="active"><a href="home">Home</a></li>
+        <li><a href="usd-curr">USD-Stocks</a></li>
+        <li><a href="eur-curr">SGD-Stocks</a></li>
+        <li><a href="inr-curr">INR-Stocks</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login"><span class="glyphicon glyphicon-user" ></span> Logout</a></li>
+         </ul>
+    </div>
+  </div>
+</nav>
+</body>
+<div class="jumbo">
+    <div class="container">
+        <div class="container">
+          <div class="form">
+            <div class="col-sm-6 offset-sm-3">
+                <h1>Base currency : EURO
+                </h1>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+  
+              <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>{{currentDate | date:'yyyy-MM-dd'}}</th>
+                    </tr>
+                    <tr><th>Currency Code</th>  <th>Name</th>
+                      <th>Value</th> </tr>
+                    <tr><th>CAD</th>
+                  <th>Canadian Dollar</th>  <th>1.545919</th></tr>
+                    <tr><th>HKD</th> <th>Hong Kong Dollar</th>
+                      <th>8.830925</th></tr>
+                      <tr><th>ISK</th> <th>	Iceland Krona</th>
+                        <th>144.299768</th></tr>
+                        <tr><th>PHP</th><th>Philippine Peso</th>
+                          <th>57.498893</th></tr>
+                          <tr><th>DKK</th><th>Danish Krone</th>
+                            <th>7.471091</th></tr>
+                            <tr><th>HUF</th><th>Hungarian Forint</th>
+                              <th>335.92239</th></tr>
+                              <tr><th>CZK</th><th>Czech Koruna</th>
+                                <th>25.438041</th></tr>
+                                <tr><th>AUD</th><th>Australian Dollar</th>
+                                  <th>1.717177</th></tr>
+                                  <tr><th>RON</th><th>Romanian Leu</th>
+                                    <th>4.840643</th></tr>
+                                    <tr><th>SEK</th><th>Swedish Krona</th>
+                                      <th>10.658268</th></tr>
+                                      <tr><th>IDR</th><th>Indonesian Rupiah</th>
+                                        <th>16082.093725</th></tr>
+                                        <tr><th>INR</th><th>Indian Rupee</th>
+                                          <th>84.145</th></tr>
+                                          <tr><th>BRL</th><th>Brazilian Real</th>
+                                            <th>5.261002</th></tr>
+                                            <tr><th>RUB</th><th>Russian Ruble</th>
+                                              <th>82.372793</th></tr>
+                                              <tr><th>HRK</th><th>Croatian Kuna</th>
+                                                <th>7.571049</th></tr>
+                                                <tr><th>JPY</th><th>Japanese Yen</th>
+                                                  <th>118.407824</th></tr>
+                                                  <tr><th>THB</th><th>Thai Baht</th>
+                                                    <th>35.691041</th></tr>
+                                                    <tr><th>CHF</th><th>Swiss Franc</th>
+                                                      <th>1.058193</th></tr>
+                                                      <tr><th>SGD</th><th>Singapore Dollar</th>
+                                                        <th>1.565612</th></tr>
+                                                        <tr><th>PLN</th><th>Polish Zloty</th>
+                                                          <th>4.316081</th></tr>
+                                                           <tr><th>BGN</th><th>Bulgarian Lev</th>
+                                        <th>1.966475</th></tr>
+                                        <tr><th>TRY</th><th>Turkish Lira</th>
+                                          <th>6.962751</th></tr>
+                                          <tr><th>CNY</th><th>Yuan Renminbi</th>
+                                            <th>7.876001</th></tr>
+                                            <tr><th>NOK</th><th>Norwegian Krone</th>
+                                              <th>10.84557</th></tr>
+                                              <tr><th>NZD</th><th>New Zealand Dollar</th>
+                                                <th>6.94857</th></tr>
+                                                <tr><th>ZAR</th><th>South African Rand</th>
+                                                  <th>18.128168</th></tr>
+                                                  <tr><th>USD</th><th>US Dollar</th>
+                                                    <th>1.136164</th></tr>
+                                                    <tr><th>MXN</th><th>Mexican Peso</th>
+                                                      <th>23.831653</th></tr>
+                                                        <tr><th>ILS</th><th>New Israeli Sheqel</th>
+                                                          <th>3.960212</th></tr>
+                                                          <tr><th>GBP</th><th>Pound Sterling</th>
+                                                            <th>0.869328</th></tr>
+                                                            <tr><th>KRW</th><th>South Korean Won</th>
+                                                              <th>1350.672691</th></tr>
+                                                              <tr><th>MYR</th><th>Malaysian Ringgit</th>
+                                                                <th>1360.93638</th></tr>
+                </thead>
+                </table>
+              -->
+
+

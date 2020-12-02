@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ALGO Trading</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+</head>
+<body style="background-color:black">
+      <nav class="navbar navbar-inverse">
+  <div class="container-fluid"> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+        <span class="icon-bar" ></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">ALGO TRADING</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav">
+        <li class="active"><a href="home">Home</a></li>
+        <li><a href="currencyval">Back</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login"><span class="glyphicon glyphicon-user" ></span> Logout</a></li>
+         </ul>
+    </div>
+  </div>
+</nav>
+</body>
+<jqxChart #myChart
+    [width]="getWidth()" [height]="390"
+    [title]="'EURO / INR Currency Chart'" 
+    [description]="''"
+    [enableAnimations]="true" [enableCrosshairs]="true" [animationDuration]="1500"
+    [source]="dataAdapter" [xAxis]="xAxis"
+    [seriesGroups]="seriesGroups" [colorScheme]="'scheme17'"  [padding]="padding" >
+</jqxChart>
+<br>
+<label for="usr">Volume of INR purchase in terms of EUR:</label>
+<input type="text" #titleInput class="form-control">
+<br>
+<label for="usr">Profit or Loss percentage:</label>
+<input type="text" #titleInput class="form-control">
+<br>
+<button type="button" (click) = "showText(titleInput.value)" class="btn btn-primary">Buy</button>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<button type="button" (click) = "showText(titleInput.value)" class="btn btn-primary">Sell</button>
+
+<h1>Profit : {{value_}} INR</h1>
+<h1>Loss : {{value1_}} INR</h1>
